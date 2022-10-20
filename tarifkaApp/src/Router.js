@@ -1,11 +1,21 @@
 import React from "react";
-import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native';
+import Categories from "./pages/Categories";
+import List from "./pages/List";
+import Detail from "./pages/Detail";
+
+const Stack = createNativeStackNavigator();
 
 function App(){
   return(
-    <View>
-      <Text>TARİFKA</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="CategoriesPage" component={Categories} />
+        <Stack.Screen name="ListPage" component={List} />
+        <Stack.Screen name="DetailPage" component={Detail} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
