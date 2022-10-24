@@ -1,5 +1,5 @@
-import React, {useState,useEffect} from "react";
-import {Text, View, FlatList,StyleSheet} from 'react-native';
+import React from "react";
+import { View, FlatList,Text} from 'react-native';
 import styles from './Categories.styles';
 import Config from '../../../config';
 import CategoryCard from '../../components/CategoryCard';
@@ -25,7 +25,7 @@ const Categories = () => {
     return(
         <View style={styles.container}>
             <FlatList
-                data={data}
+                data={data.categories}
                 renderItem={renderCategory}
             />
         </View>
