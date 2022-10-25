@@ -7,11 +7,15 @@ import useFetch from "../../hooks/useFetch";
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
-const Categories = () => {
-    const {data, loading, error} = useFetch(Config.API_URL);
+const Categories = ({navigation}) => {
+    const {data, loading, error} = useFetch(Config.API_CATEGORIES);
+
+    const handleCategoriesSelect = id => {
+        navigation.navigate('Meals',{id});
+    }
 
     renderCategory = ({item}) =>  (
-        <CategoryCard category={item}/>
+        <CategoryCard category={item} onSelect={() => handleCategoriesSelect(item.id)} />
     );
 
     if(loading){

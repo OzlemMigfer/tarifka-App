@@ -2,7 +2,7 @@ import React from "react";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Categories from "./pages/Categories";
-import List from "./pages/List";
+import Meals from "./pages/Meals";
 import Detail from "./pages/Detail";
 
 const Stack = createNativeStackNavigator();
@@ -20,8 +20,16 @@ function App(){
             headerTitleAlign:'center'
           }}
         />
-        <Stack.Screen name="ListPage" component={List} />
-        <Stack.Screen name="DetailPage" component={Detail} />
+        <Stack.Screen 
+          name="Meals" 
+          component={Meals} 
+          options={{ 
+            headerStyle:{backgroundColor:'white'},
+            headerTitleStyle:{color:'#ff8000',alignItems:'center'},
+            headerTitleAlign:'center',
+          }}     
+        />
+        <Stack.Screen name="Detail" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

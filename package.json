@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@babel/plugin-proposal-async-generator-functions": "^7.19.1"
+  }
+}
