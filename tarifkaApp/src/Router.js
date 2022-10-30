@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 function App(){
   return(
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Categories">
         <Stack.Screen 
           name="Categories" 
           component={Categories} 
@@ -29,7 +29,15 @@ function App(){
             headerTitleAlign:'center',
           }}     
         />
-        <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen 
+            name="Detail" 
+            component={Detail} 
+            options={{ 
+              headerStyle:{backgroundColor:'white'},
+              headerTitleStyle:{color:'#ff8000',alignItems:'center'},
+              headerTitleAlign:'center',
+            }} 
+          />
       </Stack.Navigator>
     </NavigationContainer>
   );

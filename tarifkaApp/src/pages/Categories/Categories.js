@@ -2,7 +2,7 @@ import React from "react";
 import { View, FlatList,Text} from 'react-native';
 import styles from './Categories.styles';
 import Config from '../../../config';
-import CategoryCard from '../../components/CategoryCard';
+import CategoryCard from '../../components/Cards/CategoryCard';
 import useFetch from "../../hooks/useFetch";
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
@@ -10,12 +10,12 @@ import Error from '../../components/Error';
 const Categories = ({navigation}) => {
     const {data, loading, error} = useFetch(Config.API_CATEGORIES);
 
-    const handleCategoriesSelect = id => {
-        navigation.navigate('Meals',{id});
+    const handleCategoriesSelect = strCategory => {
+        navigation.navigate('Meals',{strCategory});
     }
 
     renderCategory = ({item}) =>  (
-        <CategoryCard category={item} onSelect={() => handleCategoriesSelect(item.id)} />
+        <CategoryCard category={item} onSelect={() => handleCategoriesSelect(item.strCategory)} />
     );
 
     if(loading){
