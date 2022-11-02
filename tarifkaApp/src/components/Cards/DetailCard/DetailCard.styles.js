@@ -2,14 +2,14 @@ import { StyleSheet, Dimensions } from "react-native";
 
 export default StyleSheet.create({
     container:{
-
+        backgroundColor:'black'
     },
     image:{
         width:100,
-        height:Dimensions.get('window')/4
+        height:100
     },
     body_container:{
-
+        backgroundColor:'red'
     },
     title:{
         fontSize:24,

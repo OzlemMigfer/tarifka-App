@@ -1,2 +1,2 @@
-import {API_CATEGORIES, API_MEALS} from '@env';
-export default {API_CATEGORIES, API_MEALS};
+import {API_CATEGORIES, API_MEALS, API_DETAIL} from '@env';
+export default {API_CATEGORIES, API_MEALS, API_DETAIL};
