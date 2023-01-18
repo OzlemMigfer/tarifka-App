@@ -11,7 +11,7 @@ const MealCard = ({meal, onSelect}) => {
                     style={styles.image}
                     source={{ uri:meal.strMealThumb }}
                 >                
-                    <Text numberOfLines={1} style={styles.title}>{meal.strMeal}</Text>
+                    <Text style={styles.title}>{meal.strMeal}</Text>
                 </ImageBackground>
             </View>
         </TouchableWithoutFeedback>
